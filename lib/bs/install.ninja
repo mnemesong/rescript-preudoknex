@@ -1,0 +1,42 @@
+rescript = 1
+rule cp
+  command = cmd.exe /C copy /Y $i $out >NUL
+rule touch
+ command = cmd.exe /C type nul >>$out & copy $out+,, >NUL
+o Column.cmi : cp ..\bs\rescript\src\Column.cmi
+o Column.cmj : cp ..\bs\rescript\src\Column.cmj
+o Column.cmt : cp ..\bs\rescript\src\Column.cmt
+o Column.res : cp ..\..\rescript\src\Column.res
+o KnexCore.cmi : cp ..\bs\rescript\src\KnexCore.cmi
+o KnexCore.cmj : cp ..\bs\rescript\src\KnexCore.cmj
+o KnexCore.cmt : cp ..\bs\rescript\src\KnexCore.cmt
+o KnexCore.res : cp ..\..\rescript\src\KnexCore.res
+o ValueType.cmi : cp ..\bs\rescript\src\ValueType.cmi
+o ValueType.cmj : cp ..\bs\rescript\src\ValueType.cmj
+o ValueType.cmt : cp ..\bs\rescript\src\ValueType.cmt
+o ValueType.res : cp ..\..\rescript\src\ValueType.res
+o PrimaryKey.cmi : cp ..\bs\rescript\src\PrimaryKey.cmi
+o PrimaryKey.cmj : cp ..\bs\rescript\src\PrimaryKey.cmj
+o PrimaryKey.cmt : cp ..\bs\rescript\src\PrimaryKey.cmt
+o PrimaryKey.res : cp ..\..\rescript\src\PrimaryKey.res
+o Clarification.cmi : cp ..\bs\rescript\src\Clarification.cmi
+o Clarification.cmj : cp ..\bs\rescript\src\Clarification.cmj
+o Clarification.cmt : cp ..\bs\rescript\src\Clarification.cmt
+o Clarification.res : cp ..\..\rescript\src\Clarification.res
+o StoreDeclaration.cmi : cp ..\bs\rescript\src\declarations\StoreDeclaration.cmi
+o StoreDeclaration.cmj : cp ..\bs\rescript\src\declarations\StoreDeclaration.cmj
+o StoreDeclaration.cmt : cp ..\bs\rescript\src\declarations\StoreDeclaration.cmt
+o StoreDeclaration.res : cp ..\..\rescript\src\declarations\StoreDeclaration.res
+o TableDeclaration.cmi : cp ..\bs\rescript\src\declarations\TableDeclaration.cmi
+o TableDeclaration.cmj : cp ..\bs\rescript\src\declarations\TableDeclaration.cmj
+o TableDeclaration.cmt : cp ..\bs\rescript\src\declarations\TableDeclaration.cmt
+o TableDeclaration.res : cp ..\..\rescript\src\declarations\TableDeclaration.res
+o ColumnDeclaration.cmi : cp ..\bs\rescript\src\declarations\ColumnDeclaration.cmi
+o ColumnDeclaration.cmj : cp ..\bs\rescript\src\declarations\ColumnDeclaration.cmj
+o ColumnDeclaration.cmt : cp ..\bs\rescript\src\declarations\ColumnDeclaration.cmt
+o ColumnDeclaration.res : cp ..\..\rescript\src\declarations\ColumnDeclaration.res
+o ValueTypeDeclaration.cmi : cp ..\bs\rescript\src\declarations\ValueTypeDeclaration.cmi
+o ValueTypeDeclaration.cmj : cp ..\bs\rescript\src\declarations\ValueTypeDeclaration.cmj
+o ValueTypeDeclaration.cmt : cp ..\bs\rescript\src\declarations\ValueTypeDeclaration.cmt
+o ValueTypeDeclaration.res : cp ..\..\rescript\src\declarations\ValueTypeDeclaration.res
+build install.stamp : touch Column.cmi Column.cmj KnexCore.cmi KnexCore.cmj ValueType.cmi ValueType.cmj PrimaryKey.cmi PrimaryKey.cmj Clarification.cmi Clarification.cmj StoreDeclaration.cmi StoreDeclaration.cmj TableDeclaration.cmi TableDeclaration.cmj ColumnDeclaration.cmi ColumnDeclaration.cmj ValueTypeDeclaration.cmi ValueTypeDeclaration.cmj 

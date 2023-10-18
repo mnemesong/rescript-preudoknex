@@ -1,0 +1,29 @@
+{
+  "name": "rescript-preudoknex",
+  "version": "1.0.0",
+  "description": "minimal knex realization only for my needs",
+  "main": "index.js",
+  "scripts": {
+    "res:build": "rescript",
+    "res:dev": "rescript build -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnemesong/rescript-preudoknex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnemesong/rescript-preudoknex/issues"
+  },
+  "homepage": "https://github.com/mnemesong/rescript-preudoknex#readme",
+  "devDependencies": {
+    "rescript": "^10.1.4",
+    "rescript-uuid": "*"
+  },
+  "dependencies": {
+    "knex": "*",
+    "uuid": "*"
+  }
+}

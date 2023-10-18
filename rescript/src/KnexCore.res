@@ -1,0 +1,3 @@
+type knexBuilder
+
+type knexTable

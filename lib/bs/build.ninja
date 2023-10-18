@@ -1,0 +1,38 @@
+rescript = 1
+g_finger := D:\rescript-projects\rescript-preudoknex\node_modules\rescript-uuid\lib\ocaml\install.stamp
+rule astj
+  command = "D:\rescript-projects\rescript-preudoknex\node_modules\rescript\win32\bsc.exe"  -bs-v 10.1.4  -absname -bs-ast -o $out $i
+o rescript\src\Column.ast : astj ..\..\rescript\src\Column.res
+rule deps
+  command = "D:\rescript-projects\rescript-preudoknex\node_modules\rescript\win32\bsb_helper.exe" -hash ad25541e9776537995408a5fa73666c1 $in
+  restat = 1
+o rescript\src\Column.d : deps rescript\src\Column.ast
+rule mij
+  command = "D:\rescript-projects\rescript-preudoknex\node_modules\rescript\win32\bsc.exe" -I "rescript\src\declarations" -I "rescript\src" -I rescript -I "D:\rescript-projects\rescript-preudoknex\node_modules\rescript-uuid\lib\ocaml"   -bs-package-name rescript-pseudoknex -bs-package-output commonjs:lib\js\$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o rescript\src\Column.cmj rescript\src\Column.cmi ..\js\rescript\src\Column.bs.js : mij rescript\src\Column.ast
+o rescript\src\KnexCore.ast : astj ..\..\rescript\src\KnexCore.res
+o rescript\src\KnexCore.d : deps rescript\src\KnexCore.ast
+o rescript\src\KnexCore.cmj rescript\src\KnexCore.cmi ..\js\rescript\src\KnexCore.bs.js : mij rescript\src\KnexCore.ast
+o rescript\src\ValueType.ast : astj ..\..\rescript\src\ValueType.res
+o rescript\src\ValueType.d : deps rescript\src\ValueType.ast
+o rescript\src\ValueType.cmj rescript\src\ValueType.cmi ..\js\rescript\src\ValueType.bs.js : mij rescript\src\ValueType.ast
+o rescript\src\PrimaryKey.ast : astj ..\..\rescript\src\PrimaryKey.res
+o rescript\src\PrimaryKey.d : deps rescript\src\PrimaryKey.ast
+o rescript\src\PrimaryKey.cmj rescript\src\PrimaryKey.cmi ..\js\rescript\src\PrimaryKey.bs.js : mij rescript\src\PrimaryKey.ast
+o rescript\src\Clarification.ast : astj ..\..\rescript\src\Clarification.res
+o rescript\src\Clarification.d : deps rescript\src\Clarification.ast
+o rescript\src\Clarification.cmj rescript\src\Clarification.cmi ..\js\rescript\src\Clarification.bs.js : mij rescript\src\Clarification.ast
+o rescript\src\declarations\StoreDeclaration.ast : astj ..\..\rescript\src\declarations\StoreDeclaration.res
+o rescript\src\declarations\StoreDeclaration.d : deps rescript\src\declarations\StoreDeclaration.ast
+o rescript\src\declarations\StoreDeclaration.cmj rescript\src\declarations\StoreDeclaration.cmi ..\js\rescript\src\declarations\StoreDeclaration.bs.js : mij rescript\src\declarations\StoreDeclaration.ast
+o rescript\src\declarations\TableDeclaration.ast : astj ..\..\rescript\src\declarations\TableDeclaration.res
+o rescript\src\declarations\TableDeclaration.d : deps rescript\src\declarations\TableDeclaration.ast
+o rescript\src\declarations\TableDeclaration.cmj rescript\src\declarations\TableDeclaration.cmi ..\js\rescript\src\declarations\TableDeclaration.bs.js : mij rescript\src\declarations\TableDeclaration.ast
+o rescript\src\declarations\ColumnDeclaration.ast : astj ..\..\rescript\src\declarations\ColumnDeclaration.res
+o rescript\src\declarations\ColumnDeclaration.d : deps rescript\src\declarations\ColumnDeclaration.ast
+o rescript\src\declarations\ColumnDeclaration.cmj rescript\src\declarations\ColumnDeclaration.cmi ..\js\rescript\src\declarations\ColumnDeclaration.bs.js : mij rescript\src\declarations\ColumnDeclaration.ast
+o rescript\src\declarations\ValueTypeDeclaration.ast : astj ..\..\rescript\src\declarations\ValueTypeDeclaration.res
+o rescript\src\declarations\ValueTypeDeclaration.d : deps rescript\src\declarations\ValueTypeDeclaration.ast
+o rescript\src\declarations\ValueTypeDeclaration.cmj rescript\src\declarations\ValueTypeDeclaration.cmi ..\js\rescript\src\declarations\ValueTypeDeclaration.bs.js : mij rescript\src\declarations\ValueTypeDeclaration.ast
