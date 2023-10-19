@@ -3,26 +3,34 @@ rule cp
   command = cmd.exe /C copy /Y $i $out >NUL
 rule touch
  command = cmd.exe /C type nul >>$out & copy $out+,, >NUL
-o Column.cmi : cp ..\bs\rescript\src\Column.cmi
-o Column.cmj : cp ..\bs\rescript\src\Column.cmj
-o Column.cmt : cp ..\bs\rescript\src\Column.cmt
-o Column.res : cp ..\..\rescript\src\Column.res
-o KnexCore.cmi : cp ..\bs\rescript\src\KnexCore.cmi
-o KnexCore.cmj : cp ..\bs\rescript\src\KnexCore.cmj
-o KnexCore.cmt : cp ..\bs\rescript\src\KnexCore.cmt
-o KnexCore.res : cp ..\..\rescript\src\KnexCore.res
-o ValueType.cmi : cp ..\bs\rescript\src\ValueType.cmi
-o ValueType.cmj : cp ..\bs\rescript\src\ValueType.cmj
-o ValueType.cmt : cp ..\bs\rescript\src\ValueType.cmt
-o ValueType.res : cp ..\..\rescript\src\ValueType.res
-o PrimaryKey.cmi : cp ..\bs\rescript\src\PrimaryKey.cmi
-o PrimaryKey.cmj : cp ..\bs\rescript\src\PrimaryKey.cmj
-o PrimaryKey.cmt : cp ..\bs\rescript\src\PrimaryKey.cmt
-o PrimaryKey.res : cp ..\..\rescript\src\PrimaryKey.res
-o Clarification.cmi : cp ..\bs\rescript\src\Clarification.cmi
-o Clarification.cmj : cp ..\bs\rescript\src\Clarification.cmj
-o Clarification.cmt : cp ..\bs\rescript\src\Clarification.cmt
-o Clarification.res : cp ..\..\rescript\src\Clarification.res
+o KnexCore.cmi : cp ..\bs\rescript\src\general\KnexCore.cmi
+o KnexCore.cmj : cp ..\bs\rescript\src\general\KnexCore.cmj
+o KnexCore.cmt : cp ..\bs\rescript\src\general\KnexCore.cmt
+o KnexCore.res : cp ..\..\rescript\src\general\KnexCore.res
+o ValueType.cmi : cp ..\bs\rescript\src\general\ValueType.cmi
+o ValueType.cmj : cp ..\bs\rescript\src\general\ValueType.cmj
+o ValueType.cmt : cp ..\bs\rescript\src\general\ValueType.cmt
+o ValueType.res : cp ..\..\rescript\src\general\ValueType.res
+o PrimaryKey.cmi : cp ..\bs\rescript\src\general\PrimaryKey.cmi
+o PrimaryKey.cmj : cp ..\bs\rescript\src\general\PrimaryKey.cmj
+o PrimaryKey.cmt : cp ..\bs\rescript\src\general\PrimaryKey.cmt
+o PrimaryKey.res : cp ..\..\rescript\src\general\PrimaryKey.res
+o QueryOptions.cmi : cp ..\bs\rescript\src\general\QueryOptions.cmi
+o QueryOptions.cmj : cp ..\bs\rescript\src\general\QueryOptions.cmj
+o QueryOptions.cmt : cp ..\bs\rescript\src\general\QueryOptions.cmt
+o QueryOptions.res : cp ..\..\rescript\src\general\QueryOptions.res
+o Clarification.cmi : cp ..\bs\rescript\src\general\Clarification.cmi
+o Clarification.cmj : cp ..\bs\rescript\src\general\Clarification.cmj
+o Clarification.cmt : cp ..\bs\rescript\src\general\Clarification.cmt
+o Clarification.res : cp ..\..\rescript\src\general\Clarification.res
+o SomeTable.cmi : cp ..\bs\rescript\src\example\SomeTable.cmi
+o SomeTable.cmj : cp ..\bs\rescript\src\example\SomeTable.cmj
+o SomeTable.cmt : cp ..\bs\rescript\src\example\SomeTable.cmt
+o SomeTable.res : cp ..\..\rescript\src\example\SomeTable.res
+o Column.cmi : cp ..\bs\rescript\src\deprecated\Column.cmi
+o Column.cmj : cp ..\bs\rescript\src\deprecated\Column.cmj
+o Column.cmt : cp ..\bs\rescript\src\deprecated\Column.cmt
+o Column.res : cp ..\..\rescript\src\deprecated\Column.res
 o StoreDeclaration.cmi : cp ..\bs\rescript\src\declarations\StoreDeclaration.cmi
 o StoreDeclaration.cmj : cp ..\bs\rescript\src\declarations\StoreDeclaration.cmj
 o StoreDeclaration.cmt : cp ..\bs\rescript\src\declarations\StoreDeclaration.cmt
@@ -39,4 +47,4 @@ o ValueTypeDeclaration.cmi : cp ..\bs\rescript\src\declarations\ValueTypeDeclara
 o ValueTypeDeclaration.cmj : cp ..\bs\rescript\src\declarations\ValueTypeDeclaration.cmj
 o ValueTypeDeclaration.cmt : cp ..\bs\rescript\src\declarations\ValueTypeDeclaration.cmt
 o ValueTypeDeclaration.res : cp ..\..\rescript\src\declarations\ValueTypeDeclaration.res
-build install.stamp : touch Column.cmi Column.cmj KnexCore.cmi KnexCore.cmj ValueType.cmi ValueType.cmj PrimaryKey.cmi PrimaryKey.cmj Clarification.cmi Clarification.cmj StoreDeclaration.cmi StoreDeclaration.cmj TableDeclaration.cmi TableDeclaration.cmj ColumnDeclaration.cmi ColumnDeclaration.cmj ValueTypeDeclaration.cmi ValueTypeDeclaration.cmj 
+build install.stamp : touch KnexCore.cmi KnexCore.cmj ValueType.cmi ValueType.cmj PrimaryKey.cmi PrimaryKey.cmj QueryOptions.cmi QueryOptions.cmj Clarification.cmi Clarification.cmj SomeTable.cmi SomeTable.cmj Column.cmi Column.cmj StoreDeclaration.cmi StoreDeclaration.cmj TableDeclaration.cmi TableDeclaration.cmj ColumnDeclaration.cmi ColumnDeclaration.cmj ValueTypeDeclaration.cmi ValueTypeDeclaration.cmj 

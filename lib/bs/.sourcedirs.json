@@ -1,1 +1,1 @@
-{ "dirs" : [ "rescript" , "rescript\\src" , "rescript\\src\\declarations" ] , "pkgs" : [ [ "rescript-uuid" , "D:\\rescript-projects\\rescript-preudoknex\\node_modules\\rescript-uuid" ] ] , "generated" : [] }
+{ "dirs" : [ "rescript" , "rescript\\src" , "rescript\\src\\general" , "rescript\\src\\example" , "rescript\\src\\deprecated" , "rescript\\src\\declarations" ] , "pkgs" : [ [ "rescript-uuid" , "D:\\rescript-projects\\rescript-preudoknex\\node_modules\\rescript-uuid" ] ] , "generated" : [] }

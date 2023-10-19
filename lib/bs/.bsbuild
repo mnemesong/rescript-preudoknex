@@ -1,13 +1,15 @@
-9
+11
 Column
 KnexCore
+SomeTable
 ValueType
 PrimaryKey
+QueryOptions
 Clarification
 StoreDeclaration
 TableDeclaration
 ColumnDeclaration
 ValueTypeDeclaration
-rescript\src	rescript\src\declarations	
-1
+rescript\src\deprecated	rescript\src\general	rescript\src\example	rescript\src\declarations	
+1
 0
